@@ -1,2 +1,2 @@
 # vdt
-crypto wallet pratice
+crypto wallet practice
