@@ -1,3 +1,13 @@
 <h1>Dashboard</h1>
 
 <h1>welcome {{ session.get('name') }}</h1>
+
+<table>
+    {% for block in blockchain %}
+    <tr>
+        <td>{{block.number}}</td>
+        <td>{{block.data}}</td>
+        <td>{{block.hash()}}</td>
+    </tr>
+    {% endfor %}
+</table>
