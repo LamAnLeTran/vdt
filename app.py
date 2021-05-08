@@ -97,6 +97,7 @@ def transaction():
     if request.method == 'POST':
         try:
             send_money(session.get('username'),form.username.data,form.amount.data)
+            # send_money('BANK',session.get('username'),'1')
             flash('Money sent','success')
         except Exception as e:
             flash(str(e),'danger')
@@ -132,8 +133,8 @@ def logout():
 def dashboard():
     blockchain = get_blockchain().chain
     ct = time.strftime("%I:%M %p")
-
-    return render_template('dashboard.html', session=session, ct=ct, blockchain=blockchain, page=dashboard)
+    balance = get_balance(session.get('username'))
+    return render_template('dashboard.html', session=session, ct=ct, blockchain=blockchain, page=dashboard,balance=balance)
 
 
 @app.route("/")
