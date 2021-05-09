@@ -123,6 +123,16 @@ def get_balance(username):
             balance += float(data[2])
     return balance
 
+def get_user_block(username):
+    blockchain_sql = Table("blockchain", "number", "hash", "previous", "data", "nonce")
+    user_blockchain = Blockchain()
+    for b in blockchain_sql.getall():
+        data = b.get('data').split("-->")
+        if username == data[0]:
+            user_blockchain.add(Block(int(b.get('number')), b.get('previous'), b.get('data'), b.get('nonce')))
+        if username == data[1]:
+            user_blockchain.add(Block(int(b.get('number')), b.get('previous'), b.get('data'), b.get('nonce')))
+    return user_blockchain
 
 # get block from table
 def get_blockchain():
@@ -132,6 +142,7 @@ def get_blockchain():
         blockchain.add(Block(int(b.get('number')), b.get('previous'), b.get('data'), b.get('nonce')))
 
     return blockchain
+    
 
 # insert block to db
 def sync_blockchain(blockchain):

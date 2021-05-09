@@ -136,6 +136,15 @@ def dashboard():
     balance = get_balance(session.get('username'))
     return render_template('dashboard.html', session=session, ct=ct, blockchain=blockchain, page=dashboard,balance=balance)
 
+@app.route("/history")
+@is_logged_in
+def history():
+    blockchain = get_user_block(session.get('username'))
+    for block in blockchain.chain:
+        print(block.data)
+    ct = time.strftime("%I:%M %p")
+    balance = get_balance(session.get('username'))
+    return render_template('history.html', session=session, ct=ct, blockchain=blockchain, page=dashboard,balance=balance)
 
 @app.route("/")
 def index():
