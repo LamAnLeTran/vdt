@@ -27,5 +27,6 @@ Môn học các công nghệ mới trong phát triển phần mềm
 	+ sử dụng session chặn truy cập nếu chưa đăng nhập
 	+ cơ sở dữ liệu được kiểm tra và tạo bảng lúc thực hiện truy vấn một cách tiện lợi(sqlhelpers.py)
 
-# Demo youtube : https://youtu.be/6ogrA-6yc9I
+# Demo youtube : 
+	link video : https://youtu.be/6ogrA-6yc9I
 
