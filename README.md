@@ -7,11 +7,12 @@ Môn học các công nghệ mới trong phát triển phần mềm
 1612008 Lê Trần Lâm An
 1612008@student.hcmus.edu.vn
 
+
 ---------------------------------------
 
 # Nội dung :
 
-	Xây dựng hệ thống tiền điện tử MyCoin
+	Xây dựng hệ thống tiền điện tử sử dụng flask và mysql trên python
 
 	1. Phần giao diện và quá trình thao tác tương tự https://www.myetherwallet.com/create-wallet
 	a. Tạo Ví(Wallet) : đăng ký ví điện tử mới
@@ -20,17 +21,11 @@ Môn học các công nghệ mới trong phát triển phần mềm
 	d. Xem lịch sử giao dịch (https://etherscan.io/) : tại tab dashboard, hiển thị mọi transaction
 	2. Sử dụng thuật toán Proof Of Work với độ khó difficulty = 4
 
-# Demo youtube :
+	Tính năng thêm đặc biệt:
+	+ mua coin từ BANK ( số lượng tùy ý)
+	+ password của user được harsh
+	+ sử dụng session chặn truy cập nếu chưa đăng nhập
+	+ cơ sở dữ liệu được kiểm tra và tạo bảng lúc thực hiện truy vấn một cách tiện lợi(sqlhelpers.py)
 
-# Tài liệu tham khảo : 
+# Demo youtube : https://youtu.be/6ogrA-6yc9I
 
-	https://www.freecodecamp.org/news/create-cryptocurrency-using-python/
-
-  Các tutorial trên youtube :
-	https://youtu.be/rNvK9natbcM
-	
-	https://youtu.be/coQ5dg8wM2o
-
-	https://www.youtube.com/watch?v=malwhCwEosk
-
-	https://youtube.com/playlist?list=PLtCKS3CuBDYV_Vyl1ZH2Je8gSdXfQf4e3

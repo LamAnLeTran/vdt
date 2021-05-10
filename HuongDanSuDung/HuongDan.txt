@@ -1,0 +1,5 @@
+# Hướng dẫn sử dụng
+
+- cài đặt flask, mysql và các thư viện liên quan đến python
+
+- chạy lệnh python app.py để thực hiện chương trình
